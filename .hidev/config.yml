@@ -1,0 +1,12 @@
+package:
+    name:           php-merchant-robokassa
+    namespace:      hiqdev\php\merchant\robokassa
+    title:          RoboKassa plugin for PHP merchant library
+    type:           library
+    keywords:       php, robokassa, merchant
+    description:    |
+        [RoboKassa](http://robokassa.ru/) plugin for [PHP merchant library](https://github.com/hiqdev/php-merchant).
+
+require:
+    hiqdev/hidev-config:        "*"
+    hiqdev/hidev-config-php:    "*"
