@@ -14,7 +14,7 @@ namespace hiqdev\php\merchant\robokassa;
 class Merchant extends \hiqdev\php\merchant\Merchant
 {
     protected static $_defaults = [
-        'name'      => 'robokassa',
+        'system'    => 'robokassa',
         'label'     => 'RoboKassa',
         'actionUrl' => 'https://merchant.roboxchange.com/Index.aspx',
         'language'  => 'ru', /// TODO pass user language
