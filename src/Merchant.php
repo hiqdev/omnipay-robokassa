@@ -40,7 +40,7 @@ class Merchant extends \hiqdev\php\merchant\Merchant
     {
         // generate signature md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
         $str = implode(':', [
-            $this->purse, $this->total, $this->invoiceNo, $this->secret,
+            $this->purse, $this->total, $this->invoiceNo, $this->_secret,
             'ShpCart=' . $this->isCart, 'ShpClient=' . $this->username, 'ShpTime=' . $this->time,
         ]);
 
@@ -51,7 +51,7 @@ class Merchant extends \hiqdev\php\merchant\Merchant
     {
         /// nOutSum:nInvId:sMerchantPass2[:пользовательские параметры, в отсортированном порядке]
         $str = implode(':', [
-            $data['OutSum'], $data['InvId'], $this->secret2,
+            $data['OutSum'], $data['InvId'], $this->_secret2,
             'ShpCart=' . $data['ShpCart'], 'ShpClient=' . $this->username, 'ShpTime=' . $data['ShpTime'],
         ]);
         if (md5($str) !== strtolower($data['SignatureValue'])) {
