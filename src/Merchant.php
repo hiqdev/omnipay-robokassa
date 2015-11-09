@@ -1,11 +1,11 @@
 <?php
 
 /*
- * RoboKassa plugin for PHP merchant library
+ * RoboKassa driver for Omnipay PHP payment library
  *
- * @link      https://github.com/hiqdev/php-merchant-robokassa
- * @package   php-merchant-robokassa
- * @license   BSD-3-Clause
+ * @link      https://github.com/hiqdev/omnipay-robokassa
+ * @package   omnipay-robokassa
+ * @license   MIT
  * @copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
  */
 
