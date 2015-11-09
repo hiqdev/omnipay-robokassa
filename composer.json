@@ -1,49 +1,59 @@
 {
-    "name": "hiqdev/php-merchant-robokassa",
+    "name": "hiqdev/omnipay-robokassa",
     "type": "library",
-    "description": "RoboKassa plugin for PHP merchant library",
+    "description": "RoboKassa driver for Omnipay PHP payment library",
     "keywords": [
         "php",
+        "omnipay",
         "robokassa",
-        "merchant"
+        "merchant",
+        "payment"
     ],
-    "homepage": "https://github.com/hiqdev/php-merchant-robokassa",
-    "license": "BSD-3-Clause",
+    "homepage": "https://github.com/hiqdev/omnipay-robokassa",
+    "license": "MIT",
     "support": {
         "email": "support@hiqdev.com",
-        "source": "https://github.com/hiqdev/php-merchant-robokassa",
-        "issues": "https://github.com/hiqdev/php-merchant-robokassa/issues",
-        "wiki": "https://github.com/hiqdev/php-merchant-robokassa/wiki",
+        "source": "https://github.com/hiqdev/omnipay-robokassa",
+        "issues": "https://github.com/hiqdev/omnipay-robokassa/issues",
+        "wiki": "https://github.com/hiqdev/omnipay-robokassa/wiki",
         "forum": "http://forum.hiqdev.com/"
     },
     "authors": [
         {
+            "nick": "hiqsol",
             "name": "Andrii Vasyliev",
             "role": "Project lead",
             "email": "sol@hiqdev.com",
+            "github": "https://github.com/hiqsol",
             "homepage": "http://hipanel.com/"
         },
         {
+            "nick": "SilverFire",
             "name": "Dmitry Naumenko",
             "role": "Lead backend developer",
             "email": "silverfire@hiqdev.com",
+            "github": "https://github.com/SilverFire",
             "homepage": "http://silverfire.me/"
         },
         {
+            "nick": "tafid",
             "name": "Andrey Klochok",
             "role": "Lead frontend developer",
             "email": "tafid@hiqdev.com",
+            "github": "https://github.com/tafid",
             "homepage": "http://hiqdev.com/"
         },
         {
+            "nick": "BladeRoot",
             "name": "Yuriy Myronchuk",
             "role": "QA Lead",
             "email": "bladeroot@hiqdev.com",
+            "github": "https://github.com/BladeRoot",
             "homepage": "http://hiqdev.com/"
         }
     ],
     "require": {
-        "hiqdev/php-merchant": "*"
+        "omnipay/common": "~2.3"
     },
     "autoload": {
         "psr-4": {

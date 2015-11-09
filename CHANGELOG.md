@@ -1,5 +1,5 @@
-hiqdev/php-merchant-robokassa changelog
----------------------------------------
+hiqdev/omnipay-robokassa changelog
+----------------------------------
 
 ## Under development
 
