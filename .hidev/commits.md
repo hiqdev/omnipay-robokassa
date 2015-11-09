@@ -3,6 +3,7 @@ hiqdev/omnipay-robokassa commits history
 
 ## Under development
 
+    - 7ba90e5 2015-11-09 php-cs-fixed (sol@hiqdev.com)
     - 3c03a30 2015-11-09 started redoing to 'omnipay-robokassa' (sol@hiqdev.com)
     - fb456d6 2015-10-31 fixed '_secret' <- 'secret' (sol@hiqdev.com)
 - Added basics
