@@ -1,6 +1,6 @@
 package:
     name:           omnipay-robokassa
-    namespace:      hiqdev\php\merchant\robokassa
+    namespace:      Omnipay\RoboKassa
     headline:       Omnipay: RoboKassa
     title:          RoboKassa driver for Omnipay PHP payment library
     type:           library
