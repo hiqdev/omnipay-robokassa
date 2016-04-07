@@ -3,6 +3,9 @@ hiqdev/omnipay-robokassa commits history
 
 ## Under development
 
+    - dbfacd7 2016-04-07 deleted assets: take it from `hidev/payment-icons` (sol@hiqdev.com)
+    - a33cb7f 2016-04-07 inited tests (sol@hiqdev.com)
+    - 324f030 2016-04-07 rehideved (sol@hiqdev.com)
 - Changed: redone to `omnipay-robokassa`
     - 8feacd0 2015-11-11 fixed namespace (sol@hiqdev.com)
     - 7ba90e5 2015-11-09 php-cs-fixed (sol@hiqdev.com)

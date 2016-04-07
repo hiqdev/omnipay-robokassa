@@ -15,6 +15,12 @@ processing library for PHP 5.3+.
 
 This package implements [RoboKassa](http://robokassa.ru/) support for Omnipay.
 
+# SORRY, it's just a stub for the moment
+
+No actual implementation.
+To be done later.
+Let us know if you're about to contribute.
+
 ## Installation
 
 The preferred way to install this library is through [composer](http://getcomposer.org/download/).
