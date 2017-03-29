@@ -1,7 +1,6 @@
 <?php
-
-/*
- * RoboKassa driver for the Omnipay PHP payment processing library
+/**
+ * RoboKassa driver for Omnipay PHP payment library
  *
  * @link      https://github.com/hiqdev/omnipay-robokassa
  * @package   omnipay-robokassa

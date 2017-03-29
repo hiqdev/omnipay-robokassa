@@ -1,5 +1,4 @@
-Omnipay: RoboKassa
-==================
+# Omnipay: RoboKassa
 
 **RoboKassa driver for Omnipay PHP payment library**
 
@@ -14,12 +13,6 @@ Omnipay: RoboKassa
 processing library for PHP 5.3+.
 
 This package implements [RoboKassa](http://robokassa.ru/) support for Omnipay.
-
-# SORRY, it's just a stub for the moment
-
-No actual implementation.
-To be done later.
-Let us know if you're about to contribute.
 
 ## Installation
 
@@ -44,4 +37,4 @@ to the require section of your composer.json.
 This project is released under the terms of the MIT [license](LICENSE).
 Read more [here](http://choosealicense.com/licenses/mit).
 
-Copyright © 2015-2016, HiQDev (http://hiqdev.com/)
+Copyright © 2015-2017, HiQDev (http://hiqdev.com/)

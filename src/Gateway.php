@@ -1,12 +1,11 @@
 <?php
-
-/*
+/**
  * RoboKassa driver for Omnipay PHP payment library
  *
  * @link      https://github.com/hiqdev/omnipay-robokassa
  * @package   omnipay-robokassa
  * @license   MIT
- * @copyright Copyright (c) 2015-2016, HiQDev (http://hiqdev.com/)
+ * @copyright Copyright (c) 2015-2017, HiQDev (http://hiqdev.com/)
  */
 
 namespace Omnipay\RoboKassa;
@@ -14,13 +13,13 @@ namespace Omnipay\RoboKassa;
 use Omnipay\Common\AbstractGateway;
 
 /**
-  * Gateway for ePayService.
-  */
+ * Gateway for ePayService.
+ */
 class Gateway extends AbstractGateway
 {
     /**
-      * {@inheritdoc}
-      */
+     * {@inheritdoc}
+     */
     public function getName()
     {
         return 'RoboKassa';
@@ -32,8 +31,8 @@ class Gateway extends AbstractGateway
     }
 
     /**
-      * {@inheritdoc}
-      */
+     * {@inheritdoc}
+     */
     public function getDefaultParameters()
     {
         return [
@@ -44,10 +43,10 @@ class Gateway extends AbstractGateway
     }
 
     /**
-      * Get the unified purse.
-      *
-      * @return string merchant purse
-      */
+     * Get the unified purse.
+     *
+     * @return string merchant purse
+     */
     public function getPurse()
     {
         return $this->getParameter('purse');
