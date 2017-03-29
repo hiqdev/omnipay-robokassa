@@ -32,14 +32,54 @@ class PurchaseRequest extends AbstractRequest
         return $this->setParameter('language', $value);
     }
 
-    public function getSignatureValue()
+    public function getSignature()
     {
         return $this->getParameter('signature');
     }
 
-    public function setSignatureValue($value)
+    public function setSignature($value)
     {
         return $this->setParameter('signature', $value);
+    }
+
+    public function getInvId()
+    {
+        return $this->getParameter('inv_id');
+    }
+
+    public function setInvId($value)
+    {
+        return $this->setParameter('inv_id', $value);
+    }
+
+    public function getClient()
+    {
+        return $this->getParameter('client');
+    }
+
+    public function setClient($value)
+    {
+        return $this->setParameter('client', $value);
+    }
+
+    public function getTime()
+    {
+        return $this->getParameter('time');
+    }
+
+    public function setTime($value)
+    {
+        return $this->setParameter('time', $value);
+    }
+
+    public function getShpCart()
+    {
+        return $this->getParameter('shp_cart');
+    }
+
+    public function setShpCart($value)
+    {
+        return $this->setParameter('shp_cart', $value);
     }
 
     public function getData()
@@ -55,11 +95,12 @@ class PurchaseRequest extends AbstractRequest
             'MrchLogin' => $this->getPurse(),
             'OutSum' => $this->getAmount(),
             'IncCurrLabel' => $this->getCurrency(),
+            'InvId' => $this->getInvId(),
             'Culture' => $this->getLanguage(),
-            'ShpCart' => $this->is_cart,
-            'ShpClient' => $this->client,
-            'ShpTime' => $this->time,
-            'SignatureValue' => $this->getSignatureValue(),
+            'ShpCart' => $this->getShpCart(),
+            'ShpClient' => $this->getClient(),
+            'ShpTime' => $this->getTime(),
+            'SignatureValue' => $this->getSignature(),
         ];
     }
 
