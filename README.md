@@ -9,10 +9,13 @@
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/hiqdev/omnipay-robokassa.svg)](https://scrutinizer-ci.com/g/hiqdev/omnipay-robokassa/)
 [![Dependency Status](https://www.versioneye.com/php/hiqdev:omnipay-robokassa/dev-master/badge.svg)](https://www.versioneye.com/php/hiqdev:omnipay-robokassa/dev-master)
 
-[Omnipay](https://github.com/omnipay/omnipay) is a framework agnostic, multi-gateway payment
+[Omnipay] is a framework agnostic, multi-gateway payment
 processing library for PHP 5.3+.
 
-This package implements [RoboKassa](http://robokassa.ru/) support for Omnipay.
+This package implements [RoboKassa] support for Omnipay.
+
+[Omnipay]:      https://github.com/omnipay/omnipay
+[RoboKassa]:    http://robokassa.ru/
 
 ## Installation
 
