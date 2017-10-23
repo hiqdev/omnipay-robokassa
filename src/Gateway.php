@@ -25,11 +25,6 @@ class Gateway extends AbstractGateway
         return 'RoboKassa';
     }
 
-    public function getAssetDir()
-    {
-        return dirname(__DIR__) . '/assets';
-    }
-
     /**
      * {@inheritdoc}
      */

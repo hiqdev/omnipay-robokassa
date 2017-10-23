@@ -22,7 +22,7 @@ class CompletePurchaseRequest extends AbstractRequest
      */
     public function getData()
     {
-        $this->validate('purse');
+        $this->validate('purse', 'secretKey');
 
         return $this->httpRequest->request->all();
     }

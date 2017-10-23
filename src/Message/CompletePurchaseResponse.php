@@ -19,22 +19,84 @@ use Omnipay\Common\Message\RequestInterface;
  */
 class CompletePurchaseResponse extends AbstractResponse
 {
+    /** @var RequestInterface|CompletePurchaseRequest */
+    protected $request;
+
     public function __construct(RequestInterface $request, $data)
     {
         $this->request = $request;
         $this->data    = $data;
 
-        if ($this->getHash() !== $this->calculateHash()) {
+        if (strtolower($this->getSignatureValue()) !== $this->generateSignature()) {
             throw new InvalidResponseException('Invalid hash');
         }
+    }
 
-        if ($this->request->getTestMode() !== $this->getTestMode()) {
-            throw new InvalidResponseException('Invalid test mode');
+    public function generateSignature()
+    {
+        $params = [
+            $this->getAmount(),
+            '',
+            $this->request->getSecretKey()
+        ];
+
+        foreach ($this->getCustomFields() as $field => $value) {
+            $params[] = "$field=$value";
         }
+
+        return md5(implode(':', $params));
+    }
+
+    public function getCustomFields()
+    {
+        $fields = array_filter([
+            'Shp_TransactionId' => $this->getTransactionId(),
+            'Shp_Client' => $this->getClient(),
+            'Shp_Currency' => $this->getCurrency(),
+        ]);
+
+        ksort($fields);
+
+        return $fields;
+    }
+
+    public function getSignatureValue()
+    {
+        return $this->data['SignatureValue'];
+    }
+
+    public function getClient()
+    {
+        return $this->data['Shp_Client'];
+    }
+
+    public function getAmount()
+    {
+        return $this->data['OutSum'];
+    }
+
+    public function getPayer()
+    {
+        return $this->data['PaymentMethod'];
+    }
+
+    public function getTransactionId()
+    {
+        return $this->data['Shp_TransactionId'];
+    }
+
+    public function getCurrency()
+    {
+        return $this->data['Shp_Currency'];
+    }
+
+    public function getTransactionReference()
+    {
+        return '';
     }
 
     public function isSuccessful()
     {
-        return false;
+        return true;
     }
 }
