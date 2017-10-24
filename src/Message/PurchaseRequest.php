@@ -19,6 +19,7 @@ class PurchaseRequest extends AbstractRequest
         );
 
         return [
+            'InvId' => '0',
             'MrchLogin' => $this->getPurse(),
             'OutSum' => $this->getAmount(),
             'Desc' => $this->getDescription(),
@@ -33,7 +34,7 @@ class PurchaseRequest extends AbstractRequest
         $params = [
             $this->getPurse(),
             $this->getAmount(),
-            '',
+            '0',
             $this->getSecretKey()
         ];
 

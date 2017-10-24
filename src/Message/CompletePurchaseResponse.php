@@ -36,7 +36,7 @@ class CompletePurchaseResponse extends AbstractResponse
     {
         $params = [
             $this->getAmount(),
-            '',
+            $this->getTransactionReference(),
             $this->request->getSecretKey2()
         ];
 
@@ -92,7 +92,7 @@ class CompletePurchaseResponse extends AbstractResponse
 
     public function getTransactionReference()
     {
-        return '';
+        return $this->data['InvId'];
     }
 
     public function isSuccessful()
