@@ -24,6 +24,7 @@ class PurchaseRequest extends AbstractRequest
             'Desc' => $this->getDescription(),
             'IncCurrLabel' => $this->getCurrency(),
             'SignatureValue' => $this->generateSignature(),
+            'IsTest' => (int)$this->getTestMode(),
         ] + $this->getCustomFields();
     }
 
