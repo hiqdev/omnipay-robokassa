@@ -77,4 +77,27 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     {
         return $this->setParameter('secretKey', $value);
     }
+
+    /**
+     * Get the secret key for notification signing.
+     *
+     * @return string secret key
+     */
+    public function getSecretKey2()
+    {
+        return $this->getParameter('secretKey2');
+    }
+
+    /**
+     * Set the secret key for notification signing.
+     *
+     * @param string $value secret key
+     *
+     * @return self
+     */
+    public function setSecretKey2($value)
+    {
+        return $this->setParameter('secretKey2', $value);
+    }
+
 }

@@ -37,7 +37,7 @@ class CompletePurchaseResponse extends AbstractResponse
         $params = [
             $this->getAmount(),
             '',
-            $this->request->getSecretKey()
+            $this->request->getSecretKey2()
         ];
 
         foreach ($this->getCustomFields() as $field => $value) {
