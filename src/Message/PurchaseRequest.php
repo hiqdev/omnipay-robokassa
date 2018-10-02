@@ -32,8 +32,8 @@ class PurchaseRequest extends AbstractRequest
     public function generateSignature()
     {
         $params = [
-            $this->getPurse(),
             $this->getAmount(),
+            $this->getPurse(),
             '0',
             $this->getSecretKey()
         ];
