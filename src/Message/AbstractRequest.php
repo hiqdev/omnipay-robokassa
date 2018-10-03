@@ -20,6 +20,28 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     /**
      * Get the purse.
      *
+     * @return integer invid
+     */
+    public function getInvId()
+    {
+        return $this->getParameter('invid');
+    }
+
+    /**
+     * Set the purse.
+     *
+     * @param integer $invid invid
+     *
+     * @return self
+     */
+    public function setInvId($value)
+    {
+        return $this->setParameter('invid', $value);
+    }
+
+    /**
+     * Get the purse.
+     *
      * @return string purse
      */
     public function getPurse()
