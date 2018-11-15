@@ -1,6 +1,10 @@
 ## [Under development]
 
-## [2.0] - 2017-10-24
+## [3.0] - 2018-11-15
+
+    - [60de00f] 2018-11-15 Upgraded to OmniPay 3.0 [@SilverFire]
+
+## [2.0] - 2018-11-15
 
 - Implemented omnipay-robokassa merchant
     - [4166116] 2017-10-24 Fixed CompletePurchaseResponse to return TransactionReference and generate correct hash [@SilverFire]
@@ -60,3 +64,5 @@
 [434b7b2]: https://github.com//commit/434b7b2
 [Under development]: https://github.com//releases
 [2.0]: https://github.com/hiqdev/omnipay-robokassa/releases/tag/2.0
+[60de00f]: https://github.com/hiqdev/omnipay-robokassa/commit/60de00f
+[3.0]: https://github.com/hiqdev/omnipay-robokassa/compare/2.0...3.0

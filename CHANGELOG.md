@@ -1,6 +1,8 @@
 ## [Under development]
 
-## [2.0] - 2017-10-24
+## [3.0] - 2018-11-15
+
+## [2.0] - 2018-11-15
 
 - Implemented omnipay-robokassa merchant ([@SilverFire], [@hiqsol], [@BladeRoot])
 
@@ -16,3 +18,4 @@
 [bladeroot@gmail.com]: https://github.com/BladeRoot
 [Under development]: https://github.com//releases
 [2.0]: https://github.com/hiqdev/omnipay-robokassa/releases/tag/2.0
+[3.0]: https://github.com/hiqdev/omnipay-robokassa/compare/2.0...3.0
