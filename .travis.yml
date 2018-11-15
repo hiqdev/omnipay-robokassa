@@ -2,9 +2,9 @@ language: php
 php:
     0: 7.1
     1: 7.2
-    2: 5.6
-    3: 7
-    5: hhvm
+    4: 5.6
+    5: 7
+    6: hhvm
 dist: trusty
 cache:
     directories:
