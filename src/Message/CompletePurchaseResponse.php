@@ -50,9 +50,8 @@ class CompletePurchaseResponse extends AbstractResponse
     public function getCustomFields()
     {
         $fields = array_filter([
-            'Shp_TransactionId' => $this->getTransactionId(),
-            'Shp_Client' => $this->getClient(),
             'Shp_Currency' => $this->getCurrency(),
+            'Shp_TransactionId' => $this->getTransactionId(),
         ]);
 
         ksort($fields);
