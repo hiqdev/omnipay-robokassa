@@ -1,5 +1,12 @@
 ## [Under development]
 
+## [3.1.0] - 2019-01-11
+
+- Improved `InvId` property handling
+    - [dfa1a6a] 2019-01-11 Handle InvId property correctly [@SilverFire]
+    - [92d1ad8] 2019-01-11 Restored order fields in CompletePurchaseResponse signature [@SilverFire]
+    - [2fb084e] 2019-01-11 Fixes for Omnipay 3.0 [@SilverFire]
+
 ## [3.0] - 2018-11-15
 
     - [60de00f] 2018-11-15 Upgraded to OmniPay 3.0 [@SilverFire]
@@ -62,7 +69,12 @@
 [3cc40e3]: https://github.com//commit/3cc40e3
 [bcc0d60]: https://github.com//commit/bcc0d60
 [434b7b2]: https://github.com//commit/434b7b2
-[Under development]: https://github.com//releases
+[Under development]: https://github.com/hiqdev/omnipay-robokassa/compare/3.0...HEAD
 [2.0]: https://github.com/hiqdev/omnipay-robokassa/releases/tag/2.0
 [60de00f]: https://github.com/hiqdev/omnipay-robokassa/commit/60de00f
 [3.0]: https://github.com/hiqdev/omnipay-robokassa/compare/2.0...3.0
+[dfa1a6a]: https://github.com/hiqdev/omnipay-robokassa/commit/dfa1a6a
+[92d1ad8]: https://github.com/hiqdev/omnipay-robokassa/commit/92d1ad8
+[2fb084e]: https://github.com/hiqdev/omnipay-robokassa/commit/2fb084e
+[3.1]: https://github.com/hiqdev/omnipay-robokassa/compare/3.0...3.1
+[3.1.0]: https://github.com/hiqdev/omnipay-robokassa/compare/3.0...3.1.0
