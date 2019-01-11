@@ -10,6 +10,8 @@
 
 namespace Omnipay\RoboKassa\Message;
 
+use Omnipay\Common\Exception\InvalidRequestException;
+
 /**
  * RoboKassa Abstract Request.
  */
@@ -18,17 +20,17 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     protected $zeroAmountAllowed = false;
 
     /**
-     * Get the purse.
+     * Get the InvId
      *
-     * @return integer invid
+     * @return integer invid. Defaults to 0 (zero)
      */
     public function getInvId()
     {
-        return $this->getParameter('invid');
+        return $this->getParameter('InvId') ?? 0;
     }
 
     /**
-     * Set the purse.
+     * Set the InvId value.
      *
      * @param integer $invid invid
      *
@@ -36,7 +38,11 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
      */
     public function setInvId($value)
     {
-        return $this->setParameter('invid', $value);
+        if (!is_numeric($value)) {
+            throw new InvalidRequestException('Property InvId must be numeric');
+        }
+
+        return $this->setParameter('InvId', $value);
     }
 
     /**

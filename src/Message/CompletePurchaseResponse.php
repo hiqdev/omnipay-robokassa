@@ -90,9 +90,19 @@ class CompletePurchaseResponse extends AbstractResponse
         return $this->data['Shp_Currency'];
     }
 
+    /**
+     * RoboKassa does not provide real transaction reference (ID of payment on RoboKassa side) 😕
+     *
+     * @return string The InvId property, or 0 (zero) if InvId is not set.
+     */
     public function getTransactionReference()
     {
-        return $this->data['InvId'];
+        return $this->data['InvId'] ?? '0';
+    }
+
+    public function getInvId()
+    {
+        return $this->getTransactionReference();
     }
 
     public function isSuccessful()
