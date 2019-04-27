@@ -85,6 +85,23 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     }
 
     /**
+     * @return string
+     */
+    public function getReceipt()
+    {
+        return $this->getParameter('receipt');
+    }
+
+    /**
+     * @param $value
+     * @return \Omnipay\Common\Message\AbstractRequest
+     */
+    public function setReceipt($value)
+    {
+        return $this->setParameter('receipt', $value);
+    }
+
+    /**
      * Get the secret key.
      *
      * @return string secret key

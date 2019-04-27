@@ -15,7 +15,7 @@ class PurchaseRequest extends AbstractRequest
     public function getData()
     {
         $this->validate(
-            'purse', 'amount', 'currency', 'description'
+            'purse', 'amount', 'currency', 'description', 'receipt'
         );
 
         return [
@@ -26,6 +26,7 @@ class PurchaseRequest extends AbstractRequest
             'IncCurrLabel' => $this->getCurrency(),
             'SignatureValue' => $this->generateSignature(),
             'IsTest' => (int)$this->getTestMode(),
+            'Receipt' => $this->getReceipt(),
         ] + $this->getCustomFields();
     }
 
@@ -35,6 +36,7 @@ class PurchaseRequest extends AbstractRequest
             $this->getPurse(),
             $this->getAmount(),
             $this->getInvId(),
+            $this->getReceipt(),
             $this->getSecretKey()
         ];
 
