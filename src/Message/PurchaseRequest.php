@@ -39,12 +39,12 @@ class PurchaseRequest extends AbstractRequest
             $this->getInvId()
         ];
         if ($this->getCurrency()) {
-            array_push($params, $this->getCurrency());
+            $params[] = $this->getCurrency());
         }
         if ($this->getReceipt()) {
-            array_push($params, $this->getReceipt());
+            $params[] = $this->getReceipt());
         }
-        array_push($params, $this->getSecretKey());
+        $params[] = $this->getSecretKey());
 
         foreach ($this->getCustomFields() as $field => $value) {
             $params[] = "$field=$value";
