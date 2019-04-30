@@ -103,10 +103,12 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 
     public function getCurrency()
     {
-        if ($this->getParameter('currency') === 'RUB') {
+        $currency = $this->getParameter('currency');
+        if ($currency === 'RUB') {
             return '';
         }
-        return $this->getParameter('currency');
+        
+        return $currency;
     }
 
     /**
