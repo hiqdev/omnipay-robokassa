@@ -102,6 +102,25 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     }
 
     /**
+     * Get the payment currency label.
+     *
+     * @return string
+     */
+    public function getCurrencyLabel()
+    {
+        return $this->getParameter('currencyLabel');
+    }
+
+    /**
+     * @param string $value
+     * @return AbstractRequest
+     */
+    public function setCurrencyLabel($value)
+    {
+        return $this->setParameter('currencyLabel', $value);
+    }
+
+    /**
      * Get the secret key.
      *
      * @return string secret key

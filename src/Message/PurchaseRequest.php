@@ -15,7 +15,7 @@ class PurchaseRequest extends AbstractRequest
     public function getData()
     {
         $this->validate(
-            'purse', 'amount', 'currency', 'description', 'receipt'
+            'purse', 'amount', 'currency', 'description'
         );
 
         return [
@@ -23,9 +23,10 @@ class PurchaseRequest extends AbstractRequest
             'MrchLogin' => $this->getPurse(),
             'OutSum' => $this->getAmount(),
             'Desc' => $this->getDescription(),
-            'IncCurrLabel' => $this->getCurrency(),
+            'IncCurrLabel' => $this->getCurrencyLabel(),
+            'OutSumCurrency' => $this->getCurrency(),
             'SignatureValue' => $this->generateSignature(),
-            'IsTest' => (int)$this->getTestMode(),
+            'IsTest' => (int) $this->getTestMode(),
             'Receipt' => $this->getReceipt(),
         ] + $this->getCustomFields();
     }
@@ -36,9 +37,12 @@ class PurchaseRequest extends AbstractRequest
             $this->getPurse(),
             $this->getAmount(),
             $this->getInvId(),
-            $this->getReceipt(),
-            $this->getSecretKey()
+            $this->getCurrency()
         ];
+        if ($this->getReceipt()) {
+            array_push($params, $this->getReceipt());
+        }
+        array_push($params, $this->getSecretKey());
 
         foreach ($this->getCustomFields() as $field => $value) {
             $params[] = "$field=$value";
