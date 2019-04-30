@@ -101,6 +101,14 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->setParameter('receipt', $value);
     }
 
+    public function getCurrency()
+    {
+        if ($this->getParameter('currency') === 'RUB') {
+            return '';
+        }
+        return $this->getParameter('currency');
+    }
+
     /**
      * Get the payment currency label.
      *

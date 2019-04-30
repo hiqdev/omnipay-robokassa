@@ -36,9 +36,11 @@ class PurchaseRequest extends AbstractRequest
         $params = [
             $this->getPurse(),
             $this->getAmount(),
-            $this->getInvId(),
-            $this->getCurrency()
+            $this->getInvId()
         ];
+        if ($this->getCurrency()) {
+            array_push($params, $this->getCurrency());
+        }
         if ($this->getReceipt()) {
             array_push($params, $this->getReceipt());
         }
