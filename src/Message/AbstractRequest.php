@@ -89,7 +89,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
      */
     public function getReceipt()
     {
-        return $this->getParameter('receipt');
+        return rawurlencode($this->getParameter('receipt'));
     }
 
     /**
