@@ -85,6 +85,52 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     }
 
     /**
+     * @return string
+     */
+    public function getReceipt()
+    {
+        return rawurlencode($this->getParameter('receipt'));
+    }
+
+    /**
+     * @param $value
+     * @return \Omnipay\Common\Message\AbstractRequest
+     */
+    public function setReceipt($value)
+    {
+        return $this->setParameter('receipt', $value);
+    }
+
+    public function getCurrency()
+    {
+        $currency = $this->getParameter('currency');
+        if ($currency === 'RUB') {
+            return '';
+        }
+        
+        return $currency;
+    }
+
+    /**
+     * Get the payment currency label.
+     *
+     * @return string
+     */
+    public function getCurrencyLabel()
+    {
+        return $this->getParameter('currencyLabel');
+    }
+
+    /**
+     * @param string $value
+     * @return AbstractRequest
+     */
+    public function setCurrencyLabel($value)
+    {
+        return $this->setParameter('currencyLabel', $value);
+    }
+
+    /**
      * Get the secret key.
      *
      * @return string secret key

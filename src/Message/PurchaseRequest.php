@@ -23,9 +23,11 @@ class PurchaseRequest extends AbstractRequest
             'MrchLogin' => $this->getPurse(),
             'OutSum' => $this->getAmount(),
             'Desc' => $this->getDescription(),
-            'IncCurrLabel' => $this->getCurrency(),
+            'IncCurrLabel' => $this->getCurrencyLabel(),
+            'OutSumCurrency' => $this->getCurrency(),
             'SignatureValue' => $this->generateSignature(),
-            'IsTest' => (int)$this->getTestMode(),
+            'IsTest' => (int) $this->getTestMode(),
+            'Receipt' => $this->getReceipt(),
         ] + $this->getCustomFields();
     }
 
@@ -34,9 +36,15 @@ class PurchaseRequest extends AbstractRequest
         $params = [
             $this->getPurse(),
             $this->getAmount(),
-            $this->getInvId(),
-            $this->getSecretKey()
+            $this->getInvId()
         ];
+        if ($this->getCurrency()) {
+            $params[] = $this->getCurrency();
+        }
+        if ($this->getReceipt()) {
+            $params[] = $this->getReceipt();
+        }
+        $params[] = $this->getSecretKey();
 
         foreach ($this->getCustomFields() as $field => $value) {
             $params[] = "$field=$value";
