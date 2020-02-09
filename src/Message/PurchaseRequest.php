@@ -20,9 +20,9 @@ class PurchaseRequest extends AbstractRequest
 
         return [
             'InvId' => $this->getInvId(),
-            'MrchLogin' => $this->getPurse(),
+            'MerchantLogin' => $this->getPurse(),
             'OutSum' => $this->getAmount(),
-            'Desc' => $this->getDescription(),
+            'Description' => $this->getDescription(),
             'IncCurrLabel' => $this->getCurrencyLabel(),
             'OutSumCurrency' => $this->getCurrency(),
             'SignatureValue' => $this->generateSignature(),
@@ -57,8 +57,7 @@ class PurchaseRequest extends AbstractRequest
     {
         $fields = array_filter([
             'Shp_TransactionId' => $this->getTransactionId(),
-            'Shp_Client' => $this->getClient(),
-            'Shp_Currency' => $this->getCurrency()
+            'Shp_Client' => $this->getClient()
         ]);
 
         ksort($fields);
