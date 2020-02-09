@@ -51,8 +51,7 @@ class CompletePurchaseResponse extends AbstractResponse
     {
         $fields = array_filter([
             'Shp_TransactionId' => $this->getTransactionId(),
-            'Shp_Client' => $this->getClient(),
-            'Shp_Currency' => $this->getCurrency(),
+            'Shp_Client' => $this->getClient()
         ]);
 
         ksort($fields);
@@ -87,7 +86,7 @@ class CompletePurchaseResponse extends AbstractResponse
 
     public function getCurrency()
     {
-        return $this->data['Shp_Currency'];
+        return $this->data['OutSumCurrency'] ?? '';
     }
 
     /**
