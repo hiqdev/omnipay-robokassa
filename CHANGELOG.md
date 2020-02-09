@@ -1,5 +1,10 @@
 ## [Under development]
 
+## [3.2.0] - 2020-02-09
+
+- Updated various names according to the RoboKassa API changes (#5, #7) ([@SilverFire], [andchir@gmail.com])
+- Other minor changes ([@SilverFire], [andchir@gmail.com])
+
 ## [3.1.0] - 2019-01-11
 
 - Improved `InvId` property handling ([@SilverFire])
@@ -20,8 +25,9 @@
 [andreyklochok@gmail.com]: https://github.com/tafid
 [@BladeRoot]: https://github.com/BladeRoot
 [bladeroot@gmail.com]: https://github.com/BladeRoot
-[Under development]: https://github.com/hiqdev/omnipay-robokassa/compare/3.0...HEAD
+[Under development]: https://github.com/hiqdev/omnipay-robokassa/compare/3.1.0...HEAD
 [2.0]: https://github.com/hiqdev/omnipay-robokassa/releases/tag/2.0
 [3.0]: https://github.com/hiqdev/omnipay-robokassa/compare/2.0...3.0
 [3.1]: https://github.com/hiqdev/omnipay-robokassa/compare/3.0...3.1
 [3.1.0]: https://github.com/hiqdev/omnipay-robokassa/compare/3.0...3.1.0
+[3.2.0]: https://github.com/hiqdev/omnipay-robokassa/compare/3.1.0...3.2.0

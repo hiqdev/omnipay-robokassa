@@ -1,5 +1,20 @@
 ## [Under development]
 
+## [3.2.0] - 2020-02-09
+
+- Updated various names according to the RoboKassa API changes (#5, #7)
+    - [d36dfeb] 2020-02-09 Merge pull request #7 from andchir/master [@SilverFire]
+    - [8daf876] 2020-02-09 Fields update [andchir@gmail.com]
+    - [dc60f95] 2019-05-13 Merge pull request #5 from andchir/master [@SilverFire]
+    - [f774d3f] 2019-05-02 update [andchir@gmail.com]
+    - [999fe40] 2019-04-30 Fixed syntax error [@SilverFire]
+- Other minor changes
+    - [0e7c6aa] 2019-04-30 Get rid of array_push function call [@SilverFire]
+    - [9dfcb81] 2019-04-30 Minor [@SilverFire]
+    - [0a000fe] 2019-04-30 Currency not required. Remove currency RUB (default) [andchir@gmail.com]
+    - [7d53ad2] 2019-04-30 Receipt - not required. Currency label variable name change, add currency to signature [andchir@gmail.com]
+    - [8a40ebc] 2019-04-27 Parameter Receipt [andchir@gmail.com]
+
 ## [3.1.0] - 2019-01-11
 
 - Improved `InvId` property handling
@@ -69,7 +84,7 @@
 [3cc40e3]: https://github.com//commit/3cc40e3
 [bcc0d60]: https://github.com//commit/bcc0d60
 [434b7b2]: https://github.com//commit/434b7b2
-[Under development]: https://github.com/hiqdev/omnipay-robokassa/compare/3.0...HEAD
+[Under development]: https://github.com/hiqdev/omnipay-robokassa/compare/3.1.0...HEAD
 [2.0]: https://github.com/hiqdev/omnipay-robokassa/releases/tag/2.0
 [60de00f]: https://github.com/hiqdev/omnipay-robokassa/commit/60de00f
 [3.0]: https://github.com/hiqdev/omnipay-robokassa/compare/2.0...3.0
@@ -78,3 +93,14 @@
 [2fb084e]: https://github.com/hiqdev/omnipay-robokassa/commit/2fb084e
 [3.1]: https://github.com/hiqdev/omnipay-robokassa/compare/3.0...3.1
 [3.1.0]: https://github.com/hiqdev/omnipay-robokassa/compare/3.0...3.1.0
+[d36dfeb]: https://github.com/hiqdev/omnipay-robokassa/commit/d36dfeb
+[8daf876]: https://github.com/hiqdev/omnipay-robokassa/commit/8daf876
+[dc60f95]: https://github.com/hiqdev/omnipay-robokassa/commit/dc60f95
+[f774d3f]: https://github.com/hiqdev/omnipay-robokassa/commit/f774d3f
+[999fe40]: https://github.com/hiqdev/omnipay-robokassa/commit/999fe40
+[0e7c6aa]: https://github.com/hiqdev/omnipay-robokassa/commit/0e7c6aa
+[9dfcb81]: https://github.com/hiqdev/omnipay-robokassa/commit/9dfcb81
+[0a000fe]: https://github.com/hiqdev/omnipay-robokassa/commit/0a000fe
+[7d53ad2]: https://github.com/hiqdev/omnipay-robokassa/commit/7d53ad2
+[8a40ebc]: https://github.com/hiqdev/omnipay-robokassa/commit/8a40ebc
+[3.2.0]: https://github.com/hiqdev/omnipay-robokassa/compare/3.1.0...3.2.0
