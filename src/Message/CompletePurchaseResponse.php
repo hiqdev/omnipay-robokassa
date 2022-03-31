@@ -86,7 +86,7 @@ class CompletePurchaseResponse extends AbstractResponse
 
     public function getCurrency()
     {
-        return $this->data['OutSumCurrency'] ?? '';
+        return $this->data['OutSumCurrency'] ?? 'RUB';
     }
 
     /**
