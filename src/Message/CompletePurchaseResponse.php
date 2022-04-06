@@ -28,11 +28,13 @@ class CompletePurchaseResponse extends AbstractResponse
         $this->data    = $data;
 
         if (strtolower($this->getSignatureValue()) !== $this->generateSignature()) {
-            throw new InvalidResponseException('Invalid hash');
+            if (strtolower($this->getSignatureValue(true) !== $this->generateSignature())) {
+                throw new InvalidResponseException('Invalid hash');
+            }
         }
     }
 
-    public function generateSignature()
+    public function generateSignature($currency = false): string
     {
         $params = [
             $this->getAmount(),
@@ -47,12 +49,12 @@ class CompletePurchaseResponse extends AbstractResponse
         return md5(implode(':', $params));
     }
 
-    public function getCustomFields()
+    public function getCustomFields($currency = false): array
     {
         $fields = array_filter([
             'Shp_TransactionId' => $this->getTransactionId(),
             'Shp_Client' => $this->getClient(),
-            'Shp_Currency' => $this->getCurrency(),
+            'Shp_Currency' => $currency ? $this->getCurrency() : null,
         ]);
 
         ksort($fields);
