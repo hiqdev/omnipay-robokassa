@@ -42,7 +42,7 @@ class CompletePurchaseResponse extends AbstractResponse
             $this->request->getSecretKey2()
         ];
 
-        foreach ($this->getCustomFields() as $field => $value) {
+        foreach ($this->getCustomFields($currency) as $field => $value) {
             $params[] = "$field=$value";
         }
 
