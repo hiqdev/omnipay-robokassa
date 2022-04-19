@@ -34,7 +34,7 @@ class CompletePurchaseResponse extends AbstractResponse
         }
     }
 
-    public function generateSignature($currency = false): string
+    public function generateSignature(bool $includeCurrency = false): string
     {
         $params = [
             $this->getAmount(),
