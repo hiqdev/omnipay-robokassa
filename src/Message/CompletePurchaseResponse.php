@@ -27,7 +27,7 @@ class CompletePurchaseResponse extends AbstractResponse
         $this->request = $request;
         $this->data    = $data;
 
-        if (strtolower($this->getSignatureValue()) !== $this->generateSignature()) {
+        if (strtolower($this->getSignatureValue(false)) !== $this->generateSignature()) {
             if (strtolower($this->getSignatureValue(true) !== $this->generateSignature())) {
                 throw new InvalidResponseException('Invalid hash');
             }
@@ -42,19 +42,19 @@ class CompletePurchaseResponse extends AbstractResponse
             $this->request->getSecretKey2()
         ];
 
-        foreach ($this->getCustomFields($currency) as $field => $value) {
+        foreach ($this->getCustomFields($includeCurrency) as $field => $value) {
             $params[] = "$field=$value";
         }
 
         return md5(implode(':', $params));
     }
 
-    public function getCustomFields($currency = false): array
+    public function getCustomFields(bool $includeCurrency = false): array
     {
         $fields = array_filter([
             'Shp_TransactionId' => $this->getTransactionId(),
             'Shp_Client' => $this->getClient(),
-            'Shp_Currency' => $currency ? $this->getCurrency() : null,
+            'Shp_Currency' => $includeCurrency ? $this->getCurrency() : null,
         ]);
 
         ksort($fields);
