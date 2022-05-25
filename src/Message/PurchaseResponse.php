@@ -18,7 +18,7 @@ use Omnipay\Common\Message\RedirectResponseInterface;
  */
 class PurchaseResponse extends AbstractResponse implements RedirectResponseInterface
 {
-    protected $_redirect = 'https://merchant.roboxchange.com/Index.aspx';
+    protected $_redirect = 'https://auth.robokassa.ru/Merchant/Index.aspx';
 
     public function isSuccessful()
     {
