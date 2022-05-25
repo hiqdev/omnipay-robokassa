@@ -1,5 +1,9 @@
 ## [Under development]
 
+## [3.3.0] - 2022-05-25
+
+- Switched to a new integration URL (#8)
+
 ## [3.2.0] - 2020-02-09
 
 - Updated various names according to the RoboKassa API changes (#5, #7)
